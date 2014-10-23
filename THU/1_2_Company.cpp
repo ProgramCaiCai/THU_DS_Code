@@ -66,7 +66,7 @@ public:
 	void set(K key,V value){
 		if(used>capacity/2) resize(capacity*2-1); 
 		int p= locate(key);
-		if(!vis[p]) vis[p]=1,keys[p]=key,size++,used++;
+		if(vis[p]!=1) vis[p]=1,keys[p]=key,size++,used++;
 		values[p]=value;
 	}
 };
